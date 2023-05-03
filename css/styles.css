@@ -2,6 +2,15 @@
     --orange: #FA9665;
     --light: #FDF4F1;
     --green: #28502E;
+    --purple: #62466B;
+}
+.green {
+    background: var(--green);
+    color: #FFFFFF;
+}
+.purple {
+    background: var(--purple);
+    color: #FFFFFF;
 }
 body {
     font-family: 'Play', sans-serif;
@@ -12,13 +21,23 @@ body {
 h1 {
     font-family: 'Bruno Ace', cursive;
     font-size: 32px;
+    margin: 0;
 }
 h2 {
     font-family: 'Overpass Mono', monospace;
     background: var(--orange);
+    position: relative;
+    left: -16px;
+    padding: 4px 16px;
+    width: 100%;
+    margin: 0;
 }
 h3 {
     font-weight: 700;
+    margin: 0
+}
+p {
+    margin: 0;
 }
 a {
     color: black;
@@ -29,6 +48,13 @@ a {
 }
 i {
     font-size: 24px;
+}
+.button {
+    background: var(--orange);
+    padding: 16px;
+    border-radius: 16px;
+    font-weight: 700;
+    
 }
 /* Header*/
 header {
@@ -161,6 +187,109 @@ nav li {
     gap: 8px;
 }
 /* Index */
+.hero {
+    background-image: url(../images/Enterance.jpg);
+    background-color: #00000069;
+    height: 200px;
+    background-size: cover;
+    background-blend-mode: overlay;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.hero h1 {
+    grid-column: 1/3;
+    color: var(--orange);
+}
+.hero p {
+    font-family: 'Overpass Mono', monospace;
+    font-size: 20px;
+    color: #FFFFFF
+}
+.hero-images {
+    display: none;
+}
+.test {
+    padding: 0 16px;
+    position: relative;
+}
+.intro-explore {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 16px;
+    gap: 16px;
+}
+.wrapper {
+    display: flex;
+    border: solid;
+    border-radius: 4px;
+    gap: 16px;
+    padding: 16px;
+    background: var(--light);
+}
+.info-box {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.intro {
+    background: var(--light);
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    gap: 16px;
+}
+.intro img {
+    object-fit: contain;
+}
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+}
+.article-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 320px;
+    position: relative;
+}
+.article > p {
+    flex: 1;
+}
+.article div {
+    height: 240px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.tag {
+    font-size: 10px;
+    width: fit-content;
+    margin: 4px 8px;
+    padding: 4px;
+    border-radius: 8px;
+}
+.rocket-race {
+    background: url(../images/Children_building_rocket.jpg);
+}
+.night-museum {
+    background: url(../images/Dinosaur.jpg);
+}
+.aeronautics {
+    background: url(../images/Sheila_widnall.jpg)
+}
+.hadron {
+    background: url(../images/machine.jpg);
+}
 /* About*/
 /* Contact*/
 /* Explore*/
