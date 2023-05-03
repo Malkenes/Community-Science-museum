@@ -137,6 +137,29 @@ nav li {
     width: calc(100% - 200px);
 }
 /* Footer */
+
+.newsletter {
+    background: var(--orange);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 16px
+}
+.footer {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px;
+    background: var(--light);
+}
+.social-media_icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 8px;
+}
 /* Index */
 /* About*/
 /* Contact*/
