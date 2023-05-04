@@ -356,6 +356,55 @@ nav li {
 
 /* School*/
 /* Evolution*/
+.evolution-html {
+    scroll-snap-type: y mandatory;
+}
+.evolution-html header {
+    position: fixed;
+    width: -webkit-fill-available;
+    z-index: 1;
+}
+.evolution-html footer {
+    scroll-snap-align: start;
+}
+.evolution section {
+    scroll-snap-align: start;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.evolution-info {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+    box-shadow: inset 0px 0px 4px 5px rgba(0, 0, 0, 0.25);
+}
+.evolution-general-the-third {
+    background: var(--light);
+    padding: 16px;
+}
+.dinosaur {
+    background-image: url(../images/Dinosaur_exhibit_mobile.jpg);
+    background-position: right;
+}
+.human {
+    background-image: url(../images/Human_exhibit_mobile.jpg);
+}
+.future {
+    background-image: url(../images/Cyborg_exhibit_mobile.jpg);
+}
+.evolution-general {
+    background-image: url(../images/Mammoth_small.jpg);
+    background-position: center;
+}
+.evolution h2 {
+    font-family: 'Play', sans-serif;
+    font-size: 16px;
+    background: none;
+}
 
 @media (min-width: 600px) {
     h1 {
@@ -488,4 +537,26 @@ nav li {
     }
     /* School*/
     /* Evolution*/
+    .dinosaur {
+        background-image: url(../images/Dinosaur_exhibit.jpg);
+        background-position: center;
+    }
+    .human {
+        background-image: url(../images/Human_exhibit.jpg);
+    }
+    .future {
+        background-image: url(../images/Cyborg_exhibit.jpg);
+    }
+    .evolution-general {
+        background-image: url(../images/Mammoth_big.jpg);
+    }
+    .evolution section {
+        flex-direction: row;
+        align-items: end;
+    }
+    .evolution-info {
+        position: relative;
+        width: 30%;
+        margin: 16px;
+    }
 }
