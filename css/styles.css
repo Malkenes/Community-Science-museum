@@ -320,6 +320,40 @@ nav li {
 /* About*/
 /* Contact*/
 /* Explore*/
+.explore {
+    background-image: url(../images/explore_bg.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #0F1D2A;
+    color: #FFFFFF;
+    padding: 16px;
+
+    display: grid;
+    gap: 8px;
+}
+.left {
+    justify-self: start;
+}
+.right,
+.cosmology {
+    justify-self: end;
+}
+.explore h2 {
+    font-family: 'Play', sans-serif;
+    font-size: 16px;
+    background: none;
+}
+.explore-info {
+    padding: 16px;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.long-text {
+    display: none;
+}
+
 /* School*/
 /* Evolution*/
 
@@ -430,6 +464,28 @@ nav li {
     /* About*/
     /* Contact*/
     /* Explore*/
+    .explore {
+        grid-template-columns: 1fr 1fr;
+    }
+    .short-text {
+        display: none;
+    }
+    .long-text {
+        display: block;
+    }
+    .explore-info {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        position: relative;
+    }
+    .cosmology {
+        justify-self: center;
+        width: fit-content;
+    }
+    .cosmology p {
+        max-width: 270px;
+    }
     /* School*/
     /* Evolution*/
 }
