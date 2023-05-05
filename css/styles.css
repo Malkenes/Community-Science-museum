@@ -374,6 +374,34 @@ nav li {
     margin: 16px;
 }
 /* Contact*/
+.get-in-touch {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 16px;
+}
+.museum-thing {
+    background-image: url(../images/Exhibit.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 200px;
+}
+.get-in-touch form {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}
+.get-involved {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    gap: 16px;
+}
+.get-involved h3 {
+    width: fit-content;
+    padding: 8px;
+}
 /* Explore*/
 .explore {
     background-image: url(../images/explore_bg.jpeg);
@@ -627,6 +655,9 @@ nav li {
     }
     /* About*/
     /* Contact*/
+    .get-involved {
+        flex-direction: row;
+    }
     /* Explore*/
     .explore {
         grid-template-columns: 1fr 1fr;
