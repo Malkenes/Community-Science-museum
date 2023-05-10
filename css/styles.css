@@ -4,6 +4,7 @@
     --green: #28502E;
     --purple: #62466B;
     --blue: #337CA0; 
+    --shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .green {
     background: var(--green);
@@ -16,6 +17,9 @@
 .blue {
     background: var(--blue);
     color: #FFFFFF;
+}
+.light {
+    background: var(--light);
 }
 
 body {
@@ -57,10 +61,11 @@ i {
     background: var(--orange);
     padding: 16px;
     border-radius: 16px;
+    border: none;
     font-weight: 700;
     width: max-content;
     height: fit-content;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); 
+    box-shadow: var(--shadow); 
 }
 
 .two-cols {
@@ -88,6 +93,7 @@ header {
     background: var(--light);
     position: relative;
     padding: 16px 16px;
+    
 }
 .header-content {
     font-weight: 700;
@@ -235,7 +241,7 @@ nav li {
     display: none;
 }
 .intro-exp {
-    margin: 16px;
+    padding: 1em;
 }
 .intro-explore {
     display: grid;
@@ -243,24 +249,34 @@ nav li {
     margin-top: 16px;
 }
 .wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border-radius: 8px;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 200px;
+    background-size: contain;
 }
-.wrapper h3 {
-    place-self: center;
+.wrapper p {
+    max-width: 300px;
 }
+.highlighted {
+    background-image: url(../images/Mammoth_big.jpg);
+}
+.intro-robotics-ai {
+    background-image: url(../images/Robot.jpg);
+}
+.intro-cosmology {
+    background-image: url(../images/Astronaut.jpg);
+}
+.info-box {
+    width: calc(100% - 200px);
+    min-width: 160px;
+    padding: 0.5em;
+}
+
 .wrapper a {
     display: none;
 }
-.wrapper p {
-    grid-column: 1/3;
-    padding: 16px;
-}
-.wrapper img {
-    max-width: 100%;
-    border-radius: inherit;
-}
+
+
 
 
  
@@ -277,7 +293,8 @@ nav li {
     padding: 0 16px;
 }
 .article-wrapper {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
     padding: 16px 0;
 }
@@ -287,6 +304,7 @@ nav li {
     justify-content: end;
     position: relative;
     max-width: 600px;
+    background-color: var(--light);
 }
 .article > h3 {
     padding: 16px;
@@ -294,10 +312,12 @@ nav li {
 }
 .article > p {
     flex: 1;
+    padding: 1em;
 }
 .article div {
     height: 240px;
     background-size: cover;
+    background-position: center top;
     display: flex;
     flex-direction: column-reverse;
 }
@@ -315,9 +335,6 @@ nav li {
 }
 .aeronautics {
     background: url(../images/Sheila_widnall.jpg)
-}
-.hadron {
-    background: url(../images/machine.jpg);
 }
 /* About*/
 
@@ -360,20 +377,38 @@ nav li {
 }
 
 /* Contact*/
+.contact section {
+    padding: 1em;
+}
 .get-involved {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin: 16px;
 }
 .contact-us {
-    margin: 16px;
     display: grid;
     gap: 16px;
+    background: var(--light);
 }
-.contact-form {
+.contact-info {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+}
+.contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.contact-form {
+    padding: 1em;
+    background: #FFFFFF;
+    box-shadow: var(--shadow);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
 }
 .get-involved-points {
     display: flex;
@@ -387,6 +422,7 @@ nav li {
     left: -16px;
 }
 /* Explore*/
+
 .explore {
     background-image: url(../images/explore_bg.jpeg);
     background-size: contain;
@@ -396,15 +432,11 @@ nav li {
     background-color: #0F1D2A;
     color: #FFFFFF;
     padding: 16px;
-
     display: grid;
     gap: 8px;
 }
-.left {
-    justify-self: start;
-}
-.right,
-.cosmology {
+
+:is(.cosmology , .biology , .evolution ) {
     justify-self: end;
 }
 .explore h2 {
@@ -417,6 +449,9 @@ nav li {
     width: 200px;
     border-radius: 8px;
     box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.heading {
+    box-shadow: none;
 }
 .long-text {
     display: none;
@@ -568,7 +603,7 @@ input[type="radio"] {
     .hero {
         height: 700px;
         background-image: none;
-        background: var(--light);
+        background: linear-gradient(var(--light),#FFFFFF);
         grid-template-rows: repeat(2, auto);
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
@@ -622,17 +657,22 @@ input[type="radio"] {
     }
 
     .intro-explore {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
-    .wrapper {
-        grid-template-columns: unset;
+    .highlighted {
+        grid-row: 1/3;
+        height: 100%;
+        flex-direction: column-reverse;
+        position: relative;
+        background-size: cover;
     }
-    .wrapper p {
-        grid-column: 1;
-    }
-    .wrapper img {
+    .highlighted .info-box {
+        box-sizing: border-box;
         width: 100%;
+        min-height: 100px;
     }
+    
 
     .intro {
         flex-direction: row;
@@ -645,7 +685,7 @@ input[type="radio"] {
         max-height: 500px;
     }
     .article-wrapper {
-        grid-template-columns: repeat(2, 1fr);
+        flex-direction: row;
     }
     /* About*/
     .school-hero {
@@ -659,28 +699,7 @@ input[type="radio"] {
         grid-template-columns: repeat(2, 1fr);
     }
     /* Explore*/
-    .explore {
-        grid-template-columns: 1fr 1fr;
-    }
-    .short-text {
-        display: none;
-    }
-    .long-text {
-        display: block;
-    }
-    .explore-info {
-        display: flex;
-        flex-direction: column;
-        height: 200px;
-        position: relative;
-    }
-    .cosmology {
-        justify-self: center;
-        width: fit-content;
-    }
-    .cosmology p {
-        max-width: 270px;
-    }
+    
     /* School*/
     
     
@@ -716,20 +735,39 @@ input[type="radio"] {
     }
 }
 @media (min-width: 1000px) {
+    section {
+        padding: 0 5em;
+    }
     .text-block {
         place-self: center;
-    }
-    .wrapper {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .wrapper p {
-        grid-column: 1/3;
-    }
-    .article-wrapper {
-        grid-template-columns: repeat(4, 1fr);
     }
     .flex-wrap {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .contact section {
+        padding: 5em;
+    }
+    .explore {
+        grid-template-columns: 1fr 1fr;
+    }
+    .short-text {
+        display: none;
+    }
+    .long-text {
+        display: block;
+    }
+    :is(.cosmology , .robotics , .evolution , .heading) {
+        justify-self: center;
+    }
+    .explore-info {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        position: relative;
+    }
+    .explore-info:hover {
+        box-shadow: none;
+        transition: all 0.5s ease-in-out;
     }
 }
