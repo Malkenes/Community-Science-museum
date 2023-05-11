@@ -49,48 +49,52 @@
         </div>
     </header>
     <main>
-        <section class="hero">
-            <h1>COMMUNITY SCIENCE MUSEUM</h1>
-            <p class="sub-heading">Lets explore together</p>
-            <a href="#" class="button">BOOK NOW</a>
-            <div class="hero-images">
-                <img src="images/Enterance.jpg" class="picone" alt="museum enterance with pictures, benches and a rocket">
-                <img src="images/Playing_with_rocket.jpg" class="pictwo" alt="three children running outside with a homemade rocket">
-                <img src="images/Learning.jpg" class="picthree" alt="child facinated by mathematical equations">
-            </div>
-        </section>
+        <div class="hero-background">
+            <section class="hero">
+                <h1>COMMUNITY SCIENCE MUSEUM</h1>
+                <p>Lets explore together</p>
+                <a href="#" class="button">BOOK NOW</a>
+                <div class="hero-images">
+                    <img src="images/Enterance.jpg" class="hero-image-one" alt="museum enterance with pictures, benches and a rocket">
+                    <img src="images/Playing_with_rocket.jpg" class="hero-image-two" alt="three children running outside with a homemade rocket">
+                    <img src="images/Learning.jpg" class="hero-image-three" alt="child facinated by mathematical equations">
+                </div>
+            </section>
+        </div>
         <section class="intro-exp">
             <h2>EXPLORE OUR ATTRACTIONS</h2>
             <div class="intro-explore">
                 <a href="html/attractions/evolution.html" class="wrapper highlighted">
-                    <div class="info-box green">
+                    <div class="info-box">
                         <h3>Evolution</h3>
                         <p>Discover the origins of life on this planet and how the species we know today have evolved over time.</p>
                     </div>
                 </a>
                 <a href="#" class="wrapper intro-robotics-ai">
-                    <div class="info-box purple">
+                    <div class="info-box">
                         <h3>Robotics & AI</h3>
                         <p>The information revolution is here and robotics and artificial intelligence are the science of the future.</p>
                     </div>
                 </a>
                 <a href="#" class="wrapper intro-cosmology">
-                    <div class="info-box purple">
+                    <div class="info-box">
                         <h3>Cosmology</h3>
                         <p>Follow the journey of our solar exploration: from early Arab traders, to Galileos telescope, to the latest exploration of the planets in our solar system.</p>
                     </div>
                 </a>
             </div>
         </section>
-        <section class="image-text-block light">
-            <div class="text-block">
-                <h2>Lets explore together</h2>
-                <p>We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have over 1000 different exhibits on the many varied subjects of science to explore. Many of these exhibits are designed for you to interact with and play around to see science come to life </p>
-            </div>
-            <div class="intro-image">
-                <img src="images/Children_working.jpg" alt="woman teaching children how to build a robot">
-            </div>
-        </section>
+        <div class="light-background">
+            <section class="intro">
+                <div>
+                    <h2>LETS EXPLORE TOGETHER</h2>
+                    <p>We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have over 1000 different exhibits on the many varied subjects of science to explore. Many of these exhibits are designed for you to interact with and play around to see science come to life </p>
+                </div>
+                <div class="intro-image">
+                    <img src="images/Children_working.jpg" alt="woman teaching children how to build a robot">
+                </div>
+            </section>
+        </div>
         <section class="articles">
             <h2>WHATS HAPPENING</h2>
             <div class="article-wrapper">
@@ -120,14 +124,13 @@
     </main>
     <footer>
         <div class="newsletter">
-            <h3>Subscibe to our newsletter</h3>
-            <form action="#top">
+            <h3>Subscribe to our newsletter</h3>
+            <form action="#top" class="subscribe">
                 <input type="text" id="email" placeholder="Email" aria-label="write your email">
-                <button>Send</button>
+                <button class="button">Send</button>
             </form>
         </div>
         <div class="footer">
-            <h3>copyright all rights reserved</h3>
             <div>
                 <h3>Located</h3>
                 <p>Fantasyroad 353</p>
@@ -139,7 +142,7 @@
                 <p>Saturday: 10:00-17:00</p>
                 <p>Sunday: Closed</p>
             </div>
-            <div class="social-media">
+            <div>
                 <h3>See more</h3>
                 <div class="social-media_icons">
                     <i class="fa-brands fa-instagram"></i>
@@ -148,6 +151,7 @@
                     <i class="fa-brands fa-discord"></i>
                 </div>
             </div>
+            <h3>&copy All rights reserved</h3>
         </div>
     </footer>
 </body>

@@ -82,9 +82,7 @@ i {
 .image-text-block {
     display: grid;
 }
-.image-text-block img {
-    max-height: 500px;
-}
+
 /* Header*/
 header {
     display: flex;
@@ -102,6 +100,7 @@ header {
     gap: 16px;
     justify-content: end;
     align-items: center;
+    background: inherit;
 }
 .status {
     grid-column: 1/4;
@@ -145,7 +144,9 @@ nav,
 #search-checkbox,
 .search {
     display: none;
+    background: inherit;
 }
+
 nav ul {
     display: flex;
     flex-direction: column;
@@ -154,6 +155,9 @@ nav ul {
     align-items: center;
 }
 nav li {
+    display: block;
+}
+nav a {
     display: block;
     background: var(--orange);
     width: 300px;
@@ -168,7 +172,6 @@ nav li {
     width: 100%;
     top: 170%;
     right: 0;
-    background: var(--light);
     z-index: 1;
 }
 #menu-checkbox:checked ~ .status {
@@ -177,7 +180,6 @@ nav li {
     top: 100%;
     right: 0;
     width: 100%;
-    background: var(--light);
     z-index: 2;
 }
 #search-checkbox:checked ~ .search{
@@ -201,7 +203,17 @@ nav li {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 16px
+    padding: 16px;
+    gap: 1em;
+}
+.subscribe {
+    background: #FFFFFF;
+    border-radius: 1em;
+    padding: 0.2em;
+}
+#email {
+    border: none;
+    height: 3em;
 }
 .footer {
     display: flex;
@@ -215,7 +227,8 @@ nav li {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    gap: 8px;
+    gap: 0.5em;
+    padding: 0.5em;
 }
 /* Index */
 .hero {
@@ -235,7 +248,11 @@ nav li {
 .hero p {
     font-family: 'Overpass Mono', monospace;
     font-size: 20px;
-    color: #FFFFFF
+    color: #FFFFFF;
+    place-self: center left;
+}
+.hero a {
+    place-self: center;
 }
 .hero img {
     display: none;
@@ -247,6 +264,11 @@ nav li {
     display: grid;
     gap: 16px;
     margin-top: 16px;
+}
+.intro {
+    display: grid;
+    gap: 1em;
+    padding: 1em;
 }
 .wrapper {
     display: flex;
@@ -270,6 +292,7 @@ nav li {
     width: calc(100% - 200px);
     min-width: 160px;
     padding: 0.5em;
+    background: var(--light);
 }
 
 .wrapper a {
@@ -281,7 +304,7 @@ nav li {
 
  
 .intro-image {
-    margin: 16px;
+    margin: 16px 0;
 }
 .intro-image img {
     max-width: 100%;
@@ -337,7 +360,17 @@ nav li {
     background: url(../images/Sheila_widnall.jpg)
 }
 /* About*/
-
+.image-text-blocked {
+    display: grid;
+}
+.text-blocked {
+    margin: 0 1em;
+    background: #FFFFFF;
+    position: relative;
+    top: -2em;
+    box-shadow: var(--shadow);
+    padding: 1em;
+}
 .practical {
     display: flex;
     flex-direction: column;
@@ -405,7 +438,6 @@ nav li {
     padding: 1em;
     background: #FFFFFF;
     box-shadow: var(--shadow);
-    border-radius: 1em;
     display: flex;
     flex-direction: column;
     gap: 0.5em;
@@ -435,6 +467,16 @@ nav li {
     display: grid;
     gap: 8px;
 }
+.explore-header {
+    background: #0F1D2A;
+    color: #FFFFFF;
+}
+.explore-header a {
+    color: #FFFFFF;
+}
+.explore-header nav {
+    background: #0F1D2A;
+}
 
 :is(.cosmology , .biology , .evolution ) {
     justify-self: end;
@@ -450,6 +492,9 @@ nav li {
     border-radius: 8px;
     box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.explore-info p {
+    margin: 0;
+}
 .heading {
     box-shadow: none;
 }
@@ -460,6 +505,7 @@ nav li {
 /* School*/
 .school-hero {
     position: relative;
+    margin: auto;
 }
 .school-hero h1 {
     position: absolute;
@@ -477,7 +523,7 @@ input[type="radio"] {
     /* to general, need to narrow down*/
 }
 .school {
-    margin: 16px;
+    padding: 1em;
     display: none;
 }
 .select-class {
@@ -490,6 +536,10 @@ input[type="radio"] {
     text-align: center;
     padding: 16px
 }
+.select-class label:hover {
+    text-decoration: underline;
+}
+
 #primary-checkbox:checked ~ .primary{
     display: block;
 }
@@ -502,18 +552,16 @@ input[type="radio"] {
 /* Evolution*/
 .evolution-html {
     scroll-snap-type: y mandatory;
+    background: var(--light);
 }
-.evolution-html header {
-    position: fixed;
-    width: -webkit-fill-available;
-    z-index: 1;
-}
+.evolution-html header,
 .evolution-html footer {
     scroll-snap-align: start;
 }
+
 .evolution section {
-    scroll-snap-align: start;
     background-size: cover;
+    scroll-snap-align: start;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -525,6 +573,9 @@ input[type="radio"] {
     padding: 16px;
     gap: 8px;
     box-shadow: inset 0px 0px 4px 5px rgba(0, 0, 0, 0.25);
+}
+.evolution p {
+    margin: 0;
 }
 .evolution-general-the-third {
     background: var(--light);
@@ -551,9 +602,6 @@ input[type="radio"] {
 }
 
 @media (min-width: 600px) {
-    h1 {
-        font-size: 48px;
-    }
     h2 {
         max-width: 500px;
         width: fit-content;
@@ -573,6 +621,13 @@ input[type="radio"] {
     .text-block h2 {
         width: 100%;
     }
+    section {
+        max-width: 80em;
+        margin: auto;
+    }
+    .light-background {
+        background: var(--light);
+    }
 
     /* Header*/
     .logo {
@@ -585,7 +640,7 @@ input[type="radio"] {
         flex-direction: row;
         padding: 0;
     }
-    nav li {
+    nav a {
         display: contents;
     }
     .header-content {
@@ -600,13 +655,17 @@ input[type="radio"] {
     }
     /* Footer */
     /* Index */
+    .hero-background {
+        background: linear-gradient(var(--light),#FFFFFF); 
+    }
     .hero {
         height: 700px;
-        background-image: none;
-        background: linear-gradient(var(--light),#FFFFFF);
+        background: none;
         grid-template-rows: repeat(2, auto);
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
+        max-width: 80em;
+        margin: auto;
     }
     .hero-images {
         grid-column: 2/4;
@@ -626,31 +685,32 @@ input[type="radio"] {
         grid-column: 1/3;
         grid-row: 1;
         align-self: center;
+        font-size: 3em;
     }
     .hero p {
         grid-column: 1;
         grid-row: 1;
         align-self: end;
-        justify-self: center;
+        justify-self: left;
         color: black;
     }
-    .hero .button {
+    .hero a {
         grid-column: 1;
         grid-row: 2;
-        justify-self: end;
+        place-self: unset;
     }
-    .picone {
+    .hero-image-one {
         grid-column: 1;
         grid-row: 1/3;
         align-self: center;
         justify-self: end;
     }
-    .pictwo {
+    .hero-image-two {
         grid-column: 2;
         grid-row: 1;
         align-self: end;
     }
-    .picthree {
+    .hero-image-three {
         grid-column: 2;
         grid-row: 2;
         align-self: start;
@@ -675,21 +735,24 @@ input[type="radio"] {
     
 
     .intro {
-        flex-direction: row;
+        grid-template-columns: repeat(2, 1fr);
     }
     .intro div {
         align-self: center;
         flex: 1;
     }
-    .intro-image {
-        max-height: 500px;
-    }
+    
     .article-wrapper {
         flex-direction: row;
     }
     /* About*/
+    
     .school-hero {
-        margin: 16px;
+        margin: auto;
+    }
+    .flex-wrap {
+        max-width: 80em;
+        margin: auto;
     }
     /* Contact*/
     .get-involved-points {
@@ -705,7 +768,9 @@ input[type="radio"] {
     
     .primary {
         background-image: url(../images/Children_building.jpg);
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
     }
     .school p {
         width: 33%;
@@ -720,6 +785,7 @@ input[type="radio"] {
     }
     .future {
         background-image: url(../images/Cyborg_exhibit.jpg);
+        background-position: right;
     }
     .evolution-general {
         background-image: url(../images/Mammoth_big.jpg);
@@ -730,14 +796,11 @@ input[type="radio"] {
     }
     .evolution-info {
         position: relative;
-        width: 30%;
+        width: 50%;
         margin: 16px;
     }
 }
 @media (min-width: 1000px) {
-    section {
-        padding: 0 5em;
-    }
     .text-block {
         place-self: center;
     }
@@ -769,5 +832,17 @@ input[type="radio"] {
     .explore-info:hover {
         box-shadow: none;
         transition: all 0.5s ease-in-out;
+    }
+    .image-text-blocked {
+        grid-template-columns: repeat(2,1fr);
+        padding: 0 1em;
+    }
+    .text-blocked {
+        left: -4em;
+        top: 0;
+        place-self: center;
+    }
+    .school-hero {
+        margin: 1em 0;
     }
 }
