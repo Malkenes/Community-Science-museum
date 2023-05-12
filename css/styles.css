@@ -161,10 +161,10 @@ nav a {
     border-radius: 8px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
-li:hover {
+li a:hover {
     text-decoration: underline;
 }
-.underline {
+.underline a {
     text-decoration: underline;
 }
 #menu-checkbox:checked ~ nav {
@@ -262,13 +262,16 @@ li:hover {
     align-self: center;
 }
 .wrapper {
+    position: relative;
     display: flex;
     flex-direction: row-reverse;
     height: 200px;
     background-size: contain;
 }
-.wrapper p {
-    max-width: 300px;
+.wrapper:hover {
+    box-shadow: var(--shadow);
+    translate: -0.5em -0.5em; 
+    transition: all 300ms ease-out;
 }
 .highlighted {
     background-image: url(../images/Mammoth_big.jpg);
@@ -285,9 +288,7 @@ li:hover {
     padding: 0.5em;
     background: var(--light);
 }
-.wrapper a {
-    display: none;
-} 
+
 .intro-image {
     margin: 16px 0;
 }
@@ -589,7 +590,9 @@ li:hover {
         padding: 0;
     }
     nav a {
-        display: contents;
+        background: none;
+        padding: 0;
+        box-shadow: none;
     }
     .status-content {
         grid-column: 1/3;
