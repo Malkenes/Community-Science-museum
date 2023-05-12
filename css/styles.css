@@ -33,7 +33,6 @@ body {
     font-size: 16px;
     margin: 0;
 }
-
 h1 {
     font-family: 'Bruno Ace', cursive;
     font-size: 32px;
@@ -52,12 +51,10 @@ h3 {
     font-weight: 700;
     margin: 0
 }
-
 a {
     color: black;
     text-decoration: none;
 }
-
 i {
     font-size: 24px;
 }
@@ -71,13 +68,8 @@ i {
     height: fit-content;
     box-shadow: var(--shadow); 
 }
-
 .text-block {
-    margin: 16px;
-    
-}
-.image-text-block {
-    display: grid;
+    margin: 16px;    
 }
 section {
     padding: 1em;
@@ -93,6 +85,7 @@ section {
 }
 
 /* Header*/
+
 header {
     background: var(--light);
 }
@@ -114,7 +107,6 @@ header {
     align-items: center;
     background: inherit;
 }
-
 .status-content {
     display: flex;
     gap: 16px;
@@ -144,7 +136,6 @@ header {
 .logo img {
     width: 120px;
 }
-
 nav,
 .status,
 #menu-checkbox,
@@ -152,7 +143,6 @@ nav,
     display: none;
     background: inherit;
 }
-
 nav >* {
     margin: 1em;
 }
@@ -170,6 +160,12 @@ nav a {
     padding: 16px;
     border-radius: 8px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+li:hover {
+    text-decoration: underline;
+}
+.underline {
+    text-decoration: underline;
 }
 #menu-checkbox:checked ~ nav {
     display: flex;
@@ -197,13 +193,12 @@ nav a {
     border: none;
     overflow: hidden;
     transition: all 1s ease-in;
-
 }
-
 #search-checkbox:checked ~ .search{
     border-bottom: solid 1px;
     width: 100%;
 }
+
 /* Footer */
 
 .newsletter {
@@ -263,10 +258,8 @@ nav a {
 .hero img {
     display: none;
 }
-.intro {
-    display: grid;
-    gap: 1em;
-    padding: 1em;
+.introduction {
+    align-self: center;
 }
 .wrapper {
     display: flex;
@@ -292,15 +285,9 @@ nav a {
     padding: 0.5em;
     background: var(--light);
 }
-
 .wrapper a {
     display: none;
-}
-
-
-
-
- 
+} 
 .intro-image {
     margin: 16px 0;
 }
@@ -326,7 +313,7 @@ nav a {
     height: 240px;
     background-size: cover;
     background-position: center top;
-    display: flex;
+    display: inherit;
     flex-direction: column-reverse;
 }
 .tag {
@@ -344,9 +331,12 @@ nav a {
 .aeronautics {
     background: url(../images/Sheila_widnall.jpg)
 }
+
 /* About*/
+
 .image-text-blocked {
     display: grid;
+    gap: 1em;
 }
 .text-blocked {
     margin: 0 1em;
@@ -356,14 +346,9 @@ nav a {
     box-shadow: var(--shadow);
     padding: 1em;
 }
-.practical {
-    margin: 16px;
-    justify-content: space-between;
-}
 .map {
     width: 100%
 }
-
 .food,
 .shop {
     height: 200px;
@@ -387,22 +372,8 @@ nav a {
 }
 
 /* Contact*/
-.contact section {
-    padding: 1em;
-}
-.get-involved {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-.contact-us {
-    display: grid;
-    gap: 16px;
-    background: var(--light);
-}
+
 .contact-info {
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
     justify-items: center;
 }
@@ -417,11 +388,6 @@ nav a {
     box-shadow: var(--shadow);
     gap: 0.5em;
 }
-.get-involved-points {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
 .get-involved-points h3 {
     width: fit-content;
     position: relative;
@@ -429,18 +395,17 @@ nav a {
     left: -16px;
 }
 /* Explore*/
-
+.explore-main {
+    background-color: #0F1D2A;
+    color: #FFFFFF;
+}
 .explore {
     background-image: url(../images/explore_bg.jpeg);
     background-size: contain;
-    height: 100vh;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-position: top center;
-    background-color: #0F1D2A;
-    color: #FFFFFF;
-    padding: 16px;
-    display: grid;
-    gap: 8px;
+    gap: 0.5em;
 }
 .explore-header {
     background: #0F1D2A;
@@ -456,12 +421,19 @@ nav a {
 :is(.cosmology , .biology , .evolution ) {
     justify-self: end;
 }
+:is(.cosmology , .biology , .evolution ):hover {
+    right: 1em;
+}
+:is(.ecology , .robotics):hover {
+    left: 1em;
+}
 .explore h2 {
     font-family: 'Play', sans-serif;
     font-size: 16px;
     background: none;
 }
 .explore-info {
+    position: relative;
     padding: 16px;
     width: 200px;
     border-radius: 8px;
@@ -472,30 +444,23 @@ nav a {
 }
 .heading {
     box-shadow: none;
+    padding: 0;
 }
 .long-text {
     display: none;
 }
 
 /* School*/
+
 .school-hero {
     position: relative;
     margin: auto;
 }
-.school-hero h1 {
-    position: absolute;
-    right: 0;
-    font-size: 32px;
-    margin: 16px;
-    text-align: end;
-    color: var(--orange)
-}
 .school-hero img {
     max-width: 100%;
 }
-input[type="radio"] {
+.school-select input[type="radio"] {
     display: none;
-    /* to general, need to narrow down*/
 }
 .school {
     padding: 1em;
@@ -507,7 +472,7 @@ input[type="radio"] {
     justify-content: space-evenly;
 }
 .select-class label {
-    width: -webkit-fill-available;
+    width: 100%;
     text-align: center;
     padding: 16px
 }
@@ -524,7 +489,9 @@ input[type="radio"] {
 #secondary-checkbox:checked ~ .secondary{
     display: block;
 }
+
 /* Evolution*/
+
 .evolution-html {
     scroll-snap-type: y mandatory;
     background: var(--light);
@@ -565,7 +532,7 @@ input[type="radio"] {
     background-position: right;
 }
 .evolution-general {
-    background-image: url(../images/Mammoth_small.jpg);
+    background-image: url(../images/Mammoth_big.jpg);
     background-position: center;
 }
 .evolution h2 {
@@ -585,10 +552,6 @@ input[type="radio"] {
     .text-block {
         max-width: 500px;
     }
-    .image-text-block {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
     .text-block h2 {
         width: 100%;
     }
@@ -596,10 +559,10 @@ input[type="radio"] {
         max-width: 80em;
         margin: auto;
     }
-    .light-background {
-        background: var(--light);
+    .button:hover {
+        transition: all 1ms ease-in;
+        color: #FFFFFF;
     }
-
     /* Header*/
 
     .header-content {
@@ -709,23 +672,12 @@ input[type="radio"] {
         width: 100%;
         min-height: 100px;
     }
-    .intro div {
-        align-self: center;
-        flex: 1;
-    }
     
     .article-wrapper {
         flex-direction: row;
     }
     /* About*/
     
-    .school-hero {
-        margin: auto;
-    }
-    .flex-wrap {
-        max-width: 80em;
-        margin: auto;
-    }
     /* Contact*/
     .get-involved-points {
         flex-direction: row;
@@ -737,17 +689,15 @@ input[type="radio"] {
     
     .primary {
         background-image: url(../images/Children_building.jpg);
-        background-size: contain;
+        background-size: 66%;
         background-repeat: no-repeat;
         background-position: right;
     }
-    .school p {
+    .school >* {
         width: 33%;
     }
     /* Evolution*/
-    .evolution-general {
-        background-image: url(../images/Mammoth_big.jpg);
-    }
+
     .evolution div {
         flex-direction: row;
         align-items: end;
@@ -761,16 +711,6 @@ input[type="radio"] {
 @media (min-width: 1000px) {
     .text-block {
         place-self: center;
-    }
-    .flex-wrap {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .contact section {
-        padding: 5em;
-    }
-    .explore {
-        grid-template-columns: 1fr 1fr;
     }
     .short-text {
         display: none;
@@ -787,20 +727,12 @@ input[type="radio"] {
         width: 300px;
         position: relative;
     }
-    .explore-info:hover {
-        box-shadow: none;
-        transition: all 0.5s ease-in-out;
-    }
     .image-text-blocked {
         grid-template-columns: repeat(2,1fr);
-        padding: 0 1em;
     }
     .text-blocked {
         left: -4em;
         top: 0;
         place-self: center;
-    }
-    .school-hero {
-        margin: 1em 0;
     }
 }
