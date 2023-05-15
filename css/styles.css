@@ -251,19 +251,15 @@ footer section {
     flex-direction: row-reverse;
     height: 200px;
     background-size: contain;
-    border: solid 0.2em;
 }
 .highlighted {
     background-image: url(../images/Mammoth_big.jpg);
-    border-color: var(--green);
 }
 .intro-robotics-ai {
     background-image: url(../images/Robot.jpg);
-    border-color: var(--purple);
 }
 .intro-cosmology {
     background-image: url(../images/Astronaut.jpg);
-    border-color: var(--purple);
 }
 .info-box {
     width: calc(100% - 200px);
@@ -698,7 +694,7 @@ footer section {
     .button:hover {
         color: #FFFFFF;
     }
-    .wrapper:hover {
+    :is(.wrapper , .article):hover {
         box-shadow: var(--shadow);
         translate: -0.5em -0.5em; 
         transition: all 300ms ease-out;
